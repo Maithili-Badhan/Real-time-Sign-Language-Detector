@@ -1,0 +1,479 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #fff;
+    font-family: 'Fredoka One', 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: #111;
+    border-bottom: 2px solid #222;
+    position: static;
+    width: 100%;
+    z-index: 2;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 4px 14px 4px 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    gap: 10px;
+    min-height: 44px;
+}
+
+.logo img {
+    max-height: 40px;
+    width: auto;
+    margin-right: 8px;
+    display: block;
+    border-radius: 6px;
+    background: transparent;
+}
+
+.logo span {
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: color 0.2s;
+    padding: 4px 8px;
+}
+
+.nav-links li a:hover {
+    color: #aaa;
+}
+
+.home-link {
+    display: inline-block;
+    color: #fff;
+    background: #444;
+    border-radius: 8px;
+    padding: 4px 12px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.home-link:hover {
+    background: #fff;
+    color: #222;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 60px 0 24px 0;
+    font-family: 'Fredoka One', 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, sans-serif;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto 36px auto;
+    color: #eee;
+    line-height: 1.6;
+}
+
+.get-started {
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 14px 38px;
+    font-size: 1.2rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-bottom: 40px;
+}
+
+.get-started:hover {
+    background: #fff;
+    color: #222;
+}
+
+.auth-bg {
+    /* Remove old .auth-bg and .auth-bg::before styles */
+}
+
+.auth-container {
+    position: relative;
+    z-index: 1;
+    background: rgba(17, 17, 17, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+    padding: 40px 32px 32px 32px;
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top removed for vertical centering */
+}
+
+.auth-logo-block {
+    margin-bottom: 18px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    padding: 8px 18px 8px 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    gap: 10px;
+    min-height: 44px;
+    max-width: 220px;
+}
+
+.auth-logo-block img {
+    max-height: 40px;
+    width: auto;
+    margin-right: 10px;
+    display: block;
+    border-radius: 6px;
+    background: transparent;
+}
+
+.auth-logo-block span {
+    color: #222;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Fredoka One', 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, sans-serif;
+}
+
+.auth-container h2 {
+    color: #fff;
+    margin-bottom: 22px;
+    font-family: 'Fredoka One', 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, sans-serif;
+    font-size: 1.7rem;
+}
+
+.auth-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    background: #222;
+    color: #fff;
+    margin-bottom: 4px;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.auth-container input[type="email"]::placeholder,
+.auth-container input[type="password"]::placeholder {
+    color: #bbb;
+}
+
+.auth-container button {
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 8px;
+}
+
+.auth-container button:hover {
+    background: #fff;
+    color: #222;
+}
+
+.auth-link {
+    color: #eee;
+    margin-top: 18px;
+    font-size: 1rem;
+}
+
+.auth-link a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.auth-link a:hover {
+    color: #aaa;
+}
+
+.auth-logo {
+    width: auto;
+    height: 2.5rem;
+    max-height: 2.5rem;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 18px auto;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Remove old .auth-logo class if not needed */
+/* .auth-logo { display: none; } */
+
+/* Remove overrides for .navbar-center and .nav-links.nav-main in auth pages */
+.navbar-center, .navbar-center .nav-links.nav-main { all: unset; }
+
+.features-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px;
+    margin: 48px auto 32px auto;
+    max-width: 1300px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #23232b;
+    color: #fff;
+    border-radius: 18px;
+    padding: 32px 24px 24px 24px;
+    width: 300px;
+    min-height: 320px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    font-family: 'Fredoka One', 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, sans-serif;
+    flex: 1 1 250px;
+    justify-content: flex-start;
+    border: none;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-color: #888;
+}
+
+.feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.feature-icon img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 0;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin: 16px 0 14px 0;
+    font-weight: 600;
+    width: 100%;
+}
+
+.feature-card p {
+    font-size: 1.08rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #f5f5f5;
+    font-family: inherit;
+    width: 100%;
+}
+
+.footer {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: transparent;
+    flex-shrink: 0;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-hands {
+    width: 100vw;
+    max-width: 100%;
+    height: 60px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Bridge/Transition Section Styles */
+.bridge-section {
+    background: #18181b;
+    border-top: 2px solid #23232b;
+    margin: 0;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    min-height: 340px;
+    width: 100vw;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.10);
+    z-index: 1;
+    position: relative;
+}
+
+.bridge-card {
+    background: #23232b;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 32px 22px 24px 22px;
+    min-width: 270px;
+    max-width: 340px;
+    min-height: 320px;
+    margin: 0 12px;
+    transition: transform 0.18s, box-shadow 0.18s;
+    border: 1.5px solid #23232b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.bridge-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-color: #888;
+}
+
+.bridge-card img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.10));
+}
+
+.bridge-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #e0e0e0;
+    letter-spacing: 0.5px;
+}
+
+.bridge-card p {
+    font-size: 1.08rem;
+    color: #eaeaea;
+    line-height: 1.6;
+    font-family: inherit;
+}
+
+/* Make all ul in the main section have a darker background */
+main ul {
+    background: #23232b !important;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Login/Signup background illustration */
+.bg-login-illustration {
+    position: relative;
+    z-index: 0;
+}
+.bg-login-illustration::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: url('images/group-illustration-small.png') no-repeat bottom center;
+    background-size: contain;
+    opacity: 0.9;
+    filter: brightness(0.7) contrast(1.5);
+    pointer-events: none;
+}
+.bg-login-illustration > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Centered navbar for auth pages */
+.center-navbar {
+    justify-content: center !important;
+    text-align: center;
+}
+.center-navbar .nav-links {
+    justify-content: center !important;
+    width: 100%;
+}
+
+/* Auth page background image */
+.auth-bg-image {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: end start;
+    z-index: 0;
+    padding-left: 5%;
+    padding-bottom: 2%;
+}
+
+.auth-bg-image img {
+    max-width: min(800px, 90%);
+    filter: brightness(0) invert(1);
+    transform: translateX(-30%) translateY(20%);
+}
