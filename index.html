@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignBridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        .itim-font {
+            font-family: 'Itim', cursive !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-black">
+    <nav class="flex justify-between items-center px-8 py-4 itim-font relative" style="background:#18181b; border-bottom:2px solid #222; width:100%; z-index: 50;">
+        <div class="flex items-center space-x-6">
+            <div class="flex items-center bg-white rounded-lg px-3 py-1 shadow">
+                <img src="images/Logonew.png" alt="SignBridge Logo" class="h-10 w-auto mr-2 rounded">
+            </div>
+            <ul class="flex space-x-8">
+                <li><a href="#" class="text-white transition-colors duration-200 font-medium hover:text-blue-400">Home</a></li>
+                <li><a href="#about" class="text-white transition-colors duration-200 font-medium hover:text-blue-400">About</a></li>
+                <li id="features-dropdown" class="relative">
+                    <button class="text-white transition-colors duration-200 font-medium hover:text-blue-400 focus:outline-none">Features</button>
+                    <div class="absolute left-0 hidden w-96 bg-gray-800 rounded-lg shadow-xl z-[999999] border border-gray-700" style="top: 100%; backdrop-filter: blur(8px); background-color: rgba(31, 41, 55, 0.95);">
+                        <div class="grid grid-cols-2 gap-2 p-4">
+                            <a href="#" class="text-gray-200 hover:text-blue-400 p-2 rounded hover:bg-gray-700 transition-colors duration-200">Custom Gesture Training</a>
+                            <a href="#" class="text-gray-200 hover:text-blue-400 p-2 rounded hover:bg-gray-700 transition-colors duration-200">Multi-Modal Output</a>
+                            <a href="#" class="text-gray-200 hover:text-blue-400 p-2 rounded hover:bg-gray-700 transition-colors duration-200">Interactive Hand Landmark Drawing</a>
+                            <a href="#" class="text-gray-200 hover:text-blue-400 p-2 rounded hover:bg-gray-700 transition-colors duration-200">Voice-Input Integration</a>
+                            <a href="#" class="text-gray-200 hover:text-blue-400 p-2 rounded hover:bg-gray-700 transition-colors duration-200">Gesture-To-Speech</a>
+                            <a href="#" class="text-gray-200 hover:text-blue-400 p-2 rounded hover:bg-gray-700 transition-colors duration-200">Gesture History Timeline</a>
+                            <a href="#" class="text-gray-200 hover:text-blue-400 p-2 rounded hover:bg-gray-700 transition-colors duration-200">Sign Comparison</a>
+                            <a href="#" class="text-gray-200 hover:text-blue-400 p-2 rounded hover:bg-gray-700 transition-colors duration-200">Real-Time Recognition</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="flex space-x-6">
+            <li><a href="login.html" class="text-white transition-colors duration-200 font-medium hover:text-blue-400">Login</a></li>
+            <li><a href="signup.html" class="text-white transition-colors duration-200 font-medium hover:text-blue-400">Sign up</a></li>
+        </ul>
+    </nav>
+    <main class="flex flex-col items-center justify-center flex-1 text-center py-12 itim-font" style="position: relative; z-index: 1;">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-12 font-sans text-white drop-shadow-lg" data-aos="fade-up">Revolutionizing Language<br>Connecting Worlds</h1>
+        <p class="text-lg max-w-xl mx-auto mb-8 text-gray-200 mt-4" data-aos="fade-up" data-aos-delay="100">SignBridge is your gateway to seamless communication through sign languages. Experience real-time translation, gesture-to-speech, and interactive learning tools.</p>
+        <a href="login.html" class="bg-gray-700 hover:bg-white hover:text-gray-900 text-white rounded-full px-8 py-3 text-lg font-semibold transition mb-20 mt-16 inline-block">Get Started</a>
+        <section class="w-full flex flex-wrap justify-center gap-y-16 gap-x-8 mt-20">
+            <div class="bg-gray-800 rounded-2xl shadow-xl flex flex-col items-center text-center p-8 w-72 min-h-[320px] border border-[#333]" data-aos="fade-up">
+                <img src="images/icon-globe.png" alt="Globe Icon" class="w-10 h-10 mb-4">
+                <h3 class="text-2xl font-extrabold mb-6 text-blue-200 tracking-wide drop-shadow" data-aos="fade-up">Languages Supported</h3>
+                <p class="text-base text-gray-100 font-light leading-relaxed tracking-normal" data-aos="fade-up" data-aos-delay="100">Utilizing real-time video recognition via webcam and MediaPipe, SignEase offers accurate and instant sign language translation.</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl shadow-xl flex flex-col items-center text-center p-8 w-72 min-h-[320px] border border-[#333]" data-aos="fade-up">
+                <img src="images/icon-eye.png" alt="Eye Icon" class="w-10 h-10 mb-4">
+                <h3 class="text-2xl font-extrabold mb-6 text-green-200 tracking-wide drop-shadow" data-aos="fade-up">Platforms</h3>
+                <p class="text-base text-gray-100 font-light leading-relaxed tracking-normal" data-aos="fade-up" data-aos-delay="100">SignBridge provides real-time translation of sign languages for the visually impaired, specially abled people, and anyone interested in learning or communicating through sign languages.</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl shadow-xl flex flex-col items-center text-center p-8 w-72 min-h-[320px] border border-[#333]" data-aos="fade-up">
+                <img src="images/icon-heart.png" alt="Heart Icon" class="w-10 h-10 mb-4">
+                <h3 class="text-2xl font-extrabold mb-6 text-pink-200 tracking-wide drop-shadow" data-aos="fade-up">Value Proposition</h3>
+                <p class="text-base text-gray-100 font-light leading-relaxed tracking-normal" data-aos="fade-up" data-aos-delay="100">Enhance your sign language experience with SignEase and unlock a new world of communication possibilities.</p>
+            </div>
+            <div class="bg-gray-800 rounded-2xl shadow-xl flex flex-col items-center text-center p-8 w-72 min-h-[320px] border border-[#333]" data-aos="fade-up">
+                <img src="images/icon-leaf.png" alt="Leaf Icon" class="w-10 h-10 mb-4">
+                <h3 class="text-2xl font-extrabold mb-6 text-lime-200 tracking-wide drop-shadow" data-aos="fade-up">Tech Innovation</h3>
+                <p class="text-base text-gray-100 font-light leading-relaxed tracking-normal" data-aos="fade-up" data-aos-delay="100">Available on both desktop and mobile platforms, SignBridge ensures accessibility and convenience for users on-the-go.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full flex justify-center items-end mt-8 p-0 m-0">
+        <div style="background: #fff; width: 100vw; display: flex; justify-content: center; align-items: flex-end; padding: 0 5vw;">
+            <img src="images/smile-hands.png" alt="Smile in Sign Language" class="footer-hands-full" style="background: #fff; width: auto; max-width: 90vw; display: block;" />
+        </div>
+    </footer>
+    <!-- Bridge/Transition Prototype Section -->
+    <section class="w-full flex flex-wrap justify-center items-stretch gap-8 py-14 bg-black border-t-2 border-[#23232b]">
+        <div class="flex flex-col items-center text-center bg-gray-800 rounded-2xl shadow-xl p-8 w-80 min-h-[320px] mx-2 transition-transform duration-200 hover:scale-105 border border-[#333]" data-aos="fade-up">
+            <img src="images/wheel.svg" alt="Accurate Translations" class="w-14 h-14 mb-4">
+            <h3 class="text-xl font-bold mb-3 text-gray-100 tracking-wide" data-aos="fade-up">Accurate Translations</h3>
+            <p class="text-base text-gray-200 font-light leading-relaxed" data-aos="fade-up" data-aos-delay="100">We guarantee precise and faithful translations that convey the true meaning of your text.</p>
+        </div>
+        <div class="flex flex-col items-center text-center bg-gray-800 rounded-2xl shadow-xl p-8 w-80 min-h-[320px] mx-2 transition-transform duration-200 hover:scale-105 border border-[#333]" data-aos="fade-up">
+            <img src="images/globe.svg" alt="Expert Linguists" class="w-14 h-14 mb-4">
+            <h3 class="text-xl font-bold mb-3 text-gray-100 tracking-wide" data-aos="fade-up">Expert Linguists</h3>
+            <p class="text-base text-gray-200 font-light leading-relaxed" data-aos="fade-up" data-aos-delay="100">Empowers expert linguists with cutting-edge real-time translation technology like advanced video recognition and AI-powered gesture-to-speech conversion.</p>
+        </div>
+        <div class="flex flex-col items-center text-center bg-gray-800 rounded-2xl shadow-xl p-8 w-80 min-h-[320px] mx-2 transition-transform duration-200 hover:scale-105 border border-[#333]" data-aos="fade-up">
+            <img src="images/message.svg" alt="Communication Services" class="w-14 h-14 mb-4">
+            <h3 class="text-xl font-bold mb-3 text-gray-100 tracking-wide" data-aos="fade-up">Communication Services</h3>
+            <p class="text-base text-gray-200 font-light leading-relaxed" data-aos="fade-up" data-aos-delay="100">Revolutionizing communication by bridging spoken and signed languages, enabling fluid, natural interactions for individuals of all abilities.</p>
+        </div>
+    </section>
+    <!-- About Us Section -->
+    <section id="about" class="about-section w-full flex flex-col md:flex-row justify-center items-center gap-10 py-16 px-4 bg-[#18181b] border-t-2 border-gray-700" data-aos="fade-up">
+        <div class="flex flex-col justify-center items-start w-full md:w-2/3 max-w-2xl">
+            <h2 class="text-4xl font-bold mb-4 text-white">About Us</h2>
+            <h3 class="text-2xl mb-6 text-gray-200">Your Language Experts</h3>
+            <p class="text-lg text-gray-100 mb-8">SignBridge offers real-time translation of sign languages for the visually impaired and those willing to learn or communicate in sign languages. With support for ASL & BSL, users can access features like Gesture-to-Speech, Gesture History Timeline, and Custom Gesture Training.</p>
+            <div class="mb-8">
+                <h4 class="text-xl font-semibold text-white mb-2">Our Mission</h4>
+                <p class="text-gray-200 mb-4">To break down communication barriers and empower individuals of all abilities by making sign language accessible, intuitive, and engaging for everyone, everywhere.</p>
+                <h4 class="text-xl font-semibold text-white mb-2">Core Values</h4>
+                <ul class="list-disc pl-6 text-gray-200 mb-4">
+                    <li>Accessibility for All</li>
+                    <li>Innovation in Communication</li>
+                    <li>Empathy & Inclusion</li>
+                    <li>Continuous Learning</li>
+                    <li>Community Collaboration</li>
+                </ul>
+                <h4 class="text-xl font-semibold text-white mb-2">Meet Our Team</h4>
+                <p class="text-gray-200">Our diverse team of linguists, technologists, and accessibility advocates is passionate about bridging the gap between spoken and signed languages. We work together to create tools that foster understanding, independence, and connection for all users.</p>
+            </div>
+            <a href="#features" class="bg-gray-600 hover:bg-gray-400 text-white rounded-full px-8 py-3 text-lg font-semibold transition">Explore Features</a>
+        </div>
+        <div class="flex justify-center items-center w-full md:w-1/2 h-full" data-aos="fade-up">
+            <img src="images/people.png" alt="People Illustration" class="w-full max-w-2xl max-h-[500px] object-contain" style="background:transparent;" />
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 800 });</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const featuresDropdown = document.getElementById('features-dropdown');
+            const dropdownMenu = featuresDropdown.querySelector('div');
+            let timeoutId;
+
+            featuresDropdown.addEventListener('mouseenter', function() {
+                clearTimeout(timeoutId);
+                dropdownMenu.classList.remove('hidden');
+            });
+
+            featuresDropdown.addEventListener('mouseleave', function() {
+                timeoutId = setTimeout(function() {
+                    dropdownMenu.classList.add('hidden');
+                }, 100); // Small delay to prevent flickering
+            });
+        });
+    </script>
+</body>
+</html>
